@@ -6,4 +6,6 @@ This repository is currently serving as a specification document for the languag
 
 See the [spec folder](https://github.com/PyHP-pph/PyHP-pph/tree/master/spec) for a list of proposals regarding the specification.
 
+See the [src folder](https://github.com/PyHP-pph/PyHP-pph/tree/master/src) for the source code for the compiler-interpreter-compiler. 
+
 Pull requests are welcome.
