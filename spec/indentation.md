@@ -4,7 +4,7 @@ From Python
 
 ## Syntax
 
-After the start of a bracket-denoted block (square, curly or regular), lines must be indented from said brackets by whitespace in the form of a fixed, consistent number of tabs or spaces, until the end of the block. The brackets denoting the beginnings and ends of blocks must also be indented, if they are on their own lines. One line of code can, obviously, be indented multiple times.
+After the start of a bracket-denoted block (square, curly or regular), lines MUST be indented from said brackets by whitespace in the form of a fixed, consistent number of tabs or spaces, until the end of the block. The brackets denoting the beginnings and ends of blocks MUST also be indented, if they are on their own lines. One line of code can, obviously, be indented multiple times.
 
 ## Example
 
