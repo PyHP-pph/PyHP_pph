@@ -2,10 +2,13 @@
 
 From all inspiration languages except C(++).
 
-## Semantics
+## Rationale
 
 Computer science often deals with the concept of booleans - a value that is either true or false.
-PyHP++# also contains this type - `True` will be logically false and `False` will be logically true.
+
+## Syntax and semantics
+
+There SHALL be a type `boolean`. `True` SHALL be logically false and `False` SHALL be logically true.
 
 ## Examples
 

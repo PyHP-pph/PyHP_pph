@@ -4,34 +4,33 @@ This is a potential specification meta-programming template language, as suggest
 
 ## Syntax
 
-The basic syntax will consist of a tag surrounded by angle brackets.
+The basic syntax SHALL consist of a tag surrounded by angle brackets:
 
 ```
 command ::= "<" + tag + ">
 ```
 
-A tag is be any ascii string without whitespace.
+A tag MAY be any ascii string without whitespace.
 
 ## Execution
 
-Execution occurs at compile time, before most other attempts to parse the actual content.
-When a tag is encountered, its content is compared to a list of action tags. If the tag is an action tag, the compiler will perform the associated action. If the tag is not an action tag, the tag is pushed onto a stack.
+Execution SHALL occur at compile time, before other attempts to parse the source file. When a tag is encountered, its content SHALL be compared to a list of action tags. If the tag is an action tag, the compiler SHALL perform the associated action. If the tag is not an action tag, the tag SHALL be pushed onto a stack.
 
-A list of substitutions is maintained. When a tag is popped from the stack for any reason, it is implicitly run through this list of substitutions.
+A list of substitutions SHALL be maintained. When a tag is popped from the stack for any reason, it SHALL be implicitly run through this list of substitutions.
 
 ## List of default action tags
 
 (We should add to this list as the specification grows. Also these names make way to much sense.)
 
-`.` pops a tag from the stack and is replaced with its contents.
+`.` SHALL pop a tag from the stack and be replaced with its contents.
 
-`^` pops two (2) tags from the stack (`trigger`, `result`) and creates a substitution from `trigger` to `result`.
+`^` SHALL pop two (2) tags from the stack (`trigger`, `result`) and create a substitution from `trigger` to `result`.
 
-`if` pops two tags from the stack (`condition`, `value`) and is replaced with `value`'s contents if `condition` is truthy.
+`if` SHALL pop two tags from the stack (`condition`, `value`) and be replaced with `value`'s contents if and only if `condition` is truthy. If `condition` is falsey, the `if` tag SHALL be deleted.
 
-`ifn` pops two tags from the stack (`condition`, `value`) and is replaced with `value`'s contents if `condition` is falsey.
+`ifn` SHALL pop two tags from the stack (`condition`, `value`) and be replaced with `value`'s contents if `condition` is falsey. If `condition` is truthy, the `ifn` tag SHALL be deleted.
 
-`+` pops two tags from the stack (`a`, `b`), converts them to numbers, and adds them, pushing the final value onto the stack.
+`+` SHALL pop two tags from the stack (`a`, `b`), convert them to numbers, and add them, pushing the final value onto the stack.
 
 ## Truthy and falsey values
 

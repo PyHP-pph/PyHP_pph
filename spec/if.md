@@ -4,7 +4,7 @@ From C++.
 
 ## Syntax
 
-If statements will execute the code contained within the following block if the expression within the `()` brackets evaluates to the boolean value `True` (logical false).
+There SHALL be a statement `if`. `if` statements SHALL execute the code contained within the following block if and only if the expression within the `()` brackets evaluates to `True` (logical false).
 
 ## Example
 
