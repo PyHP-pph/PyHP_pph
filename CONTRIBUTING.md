@@ -3,7 +3,7 @@
 There are two different ways you might want to contribute to PyHP++#:
 
 1. Contribute to the specification.
-2. Contribute to the compiler-interpreter-compiler, which runs and compiles PyHP++# code.
+2. Contribute to the compiled interpreter-compiler, which runs and compiles PyHP++# code.
 
 The process for contributing to the two is different.
 
@@ -29,7 +29,7 @@ If you have an idea of what you want, but not a formal specification (a 'Suggest
 
 ## Contributing to the CIC
 
-If you want to contribute to the compiler-interpreter-compiler, you can do so by fixing a bug, adding a CIC feature, or implementing part of the spec that's not yet implemented.
+If you want to contribute to the compiled interpreter-compiler, you can do so by fixing a bug, adding a CIC feature, or implementing part of the spec that's not yet implemented.
 
 In any case, once you've decided what you want to do, fork the repo, create a new branch off of `master`, and start implementing your code. Make sure to commit regularly, and keep each commit relatively small.
 
