@@ -32,6 +32,13 @@ A list of substitutions SHALL be maintained. When a tag is popped from the stack
 
 `+` SHALL pop two tags from the stack (`a`, `b`), convert them to numbers, and add them, pushing the final value onto the stack.
 
+`-` SHALL pop two tags from the stack (`a`,`b`), convert them to numbers, and subtract them, pushing the final value onto the stack.
+
+`*` SHALL pop two tags from the stack (`a`,`b`), convert them to numbers, and multiply them, pushing the final value onto the stack.
+
+`/` SHALL pop two tags from the stack (`a`,`b`), convert them to numbers, and divide them, pushing the final value onto the stack.
+
+
 ## Truthy and falsey values
 
 All values are truthy except the following, which are falsey:
