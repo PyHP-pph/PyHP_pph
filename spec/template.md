@@ -38,6 +38,10 @@ A list of substitutions SHALL be maintained. When a tag is popped from the stack
 
 `/` SHALL pop two tags from the stack (`a`,`b`), convert them to numbers, and divide them, pushing the final value onto the stack.
 
+`==` SHALL pop two tags from the stack (`a`,`b`); if they are the same, the tag `true` will be pushed onto the stack, otherwise the tag `false` will be pushed.
+
+`!=` SHALL pop two tags from the stack (`a`,`b`); if they are the same, the tag `false` will be pushed onto the stack, otherwise the tag `true` will be pushed.
+
 
 ## Truthy and falsey values
 
