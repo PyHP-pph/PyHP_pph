@@ -22,4 +22,4 @@ To delete a variable from memory, use the `del` command.
 del $bool;
 ```
 
-`del` MUST remove the variable from memory and all later uses of a deleted variable SHOULD be `null`.
+`del` MUST remove the variable from memory and all later uses of a deleted variable MUST be `null`.
