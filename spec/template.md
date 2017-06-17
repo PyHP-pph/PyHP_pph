@@ -10,7 +10,7 @@ The basic syntax SHALL consist of a tag surrounded by angle brackets:
 command ::= "<" + tag + ">
 ```
 
-A tag MAY be any ascii string. In the source, a tag SHOULD NOT contain any whitespace.
+A tag MAY be any ascii string. In the source, a tag MUST NOT contain any whitespace.
 
 ## Execution
 
@@ -19,7 +19,7 @@ Execution SHALL occur at compile time, before other attempts to parse the source
 A list of substitutions SHALL be maintained. When a tag is popped from the stack for any reason, it SHALL be implicitly run through this list of substitutions.
 
 ### Record Mode
-In record mode, when a tag is encounted, instead of continuing on to be prossesed normaly, it MUST be appended to the tag on the top of the stack, followed by a space.
+In record mode, when a tag is encounted, instead of continuing on to be prossesed normaly, it MUST be appended to the tag on the top of the stack, followed by a space. For example, if the stack is `["1","+ "]` (top of the stack to the right), and the tag `.` was encountered in record mode, the stack would then be `["1","+ . "]`.
 
 ## List of default action tags
 
@@ -65,14 +65,19 @@ All values are truthy except the following, which are falsey:
 ## Example
 
 ### Hello world example
+
 ```
 <hello>
 <world>
 
 <.> <.>
 ```
-the final output is
+
+The final output is:
 ```
+
+
+
 
 hello world
 ```
