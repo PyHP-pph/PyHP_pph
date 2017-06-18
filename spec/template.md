@@ -10,13 +10,16 @@ The basic syntax SHALL consist of a tag surrounded by angle brackets:
 command ::= "<" + tag + ">
 ```
 
-A tag MAY be any ascii string without whitespace.
+A tag MAY be any ascii string. In the source, a tag MUST NOT contain any whitespace.
 
 ## Execution
 
 Execution SHALL occur at compile time, before other attempts to parse the source file. When a tag is encountered, its content SHALL be compared to a list of action tags. If the tag is an action tag, the compiler SHALL perform the associated action. If the tag is not an action tag, the tag SHALL be pushed onto a stack.
 
 A list of substitutions SHALL be maintained. When a tag is popped from the stack for any reason, it SHALL be implicitly run through this list of substitutions.
+
+### Record Mode
+In record mode, when a tag is encounted, instead of continuing on to be prossesed normaly, it MUST be appended to the tag on the top of the stack, followed by a space. For example, if the stack is `["1","+ "]` (top of the stack to the right), and the tag `.` was encountered in record mode, the stack would then be `["1","+ . "]`.
 
 ## List of default action tags
 
@@ -30,7 +33,24 @@ A list of substitutions SHALL be maintained. When a tag is popped from the stack
 
 `ifn` SHALL pop two tags from the stack (`condition`, `value`) and be replaced with `value`'s contents if `condition` is falsey. If `condition` is truthy, the `ifn` tag SHALL be deleted.
 
+`{` SHALL enter record mode and push an empty tag onto the stack.
+
+`}` SHALL exit record mode.
+
+`exec` SHALL split the tag on whitespace, and interpet each tag. This MUST be done with the current stack and subsitution list.
+
 `+` SHALL pop two tags from the stack (`a`, `b`), convert them to numbers, and add them, pushing the final value onto the stack.
+
+`-` SHALL pop two tags from the stack (`a`,`b`), convert them to numbers, and subtract them, pushing the final value onto the stack.
+
+`*` SHALL pop two tags from the stack (`a`,`b`), convert them to numbers, and multiply them, pushing the final value onto the stack.
+
+`/` SHALL pop two tags from the stack (`a`,`b`), convert them to numbers, and divide them, pushing the final value onto the stack.
+
+`==` SHALL pop two tags from the stack (`a`,`b`); if they are the same, the tag `true` will be pushed onto the stack, otherwise the tag `false` will be pushed.
+
+`!=` SHALL pop two tags from the stack (`a`,`b`); if they are the same, the tag `false` will be pushed onto the stack, otherwise the tag `true` will be pushed.
+
 
 ## Truthy and falsey values
 
@@ -44,7 +64,25 @@ All values are truthy except the following, which are falsey:
 
 ## Example
 
-Here is an example:
+### Hello world example
+
+```
+<hello>
+<world>
+
+<.> <.>
+```
+
+The final output is:
+```
+
+
+
+
+hello world
+```
+
+### Example using subsitution and addition
 
 ```
 <yes>
@@ -69,3 +107,26 @@ The final output of this is:
 
 2
 ```
+
+### Creating a macro
+This macro pops a value from the stack, adds 1 to it, and puts it.
+```
+<{>
+<1> <+> <.>
+<}>
+<add1>
+<^>
+
+3 + 1 = <3> <add1> <exec>
+```
+
+The final output is: 
+
+```
+
+
+
+
+3 + 1 = 4
+````
+
