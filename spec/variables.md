@@ -4,7 +4,7 @@ From PHP and C++.
 
 ## Syntax
 
-There SHALL be a way to declare variables using `variable_type $variable_name = new variable_type(variable_value);`. 
+There SHALL be a way to declare variables using `variable_type $variable_name = new variable_type(variable_value);`. Variable names MUST be alphanumeric with underscores, but cannot start with a numeral.
 
 ## Examples
 
