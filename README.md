@@ -6,7 +6,7 @@ This repository is currently serving as a specification document for the languag
 
 See the [spec folder](https://github.com/PyHP-pph/PyHP-pph/tree/master/spec) for a list of proposals regarding the specification.
 
-See the [src folder](https://github.com/PyHP-pph/PyHP-pph/tree/master/src) for the source code for the Compiled Interpreter-Compiler.
+See the [cic folder](https://github.com/PyHP-pph/PyHP-pph/tree/master/cic) for the source code for the Compiled Interpreter-Compiler.
 
 ## Contributing
 See [CONTRIBUTING.md](CONTRIBUTING.md) for ways to contribute to this programming language.
