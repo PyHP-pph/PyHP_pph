@@ -32,7 +32,7 @@ boolean $bool = new boolean(True);
 
 $bool = False;
 ```
-In this example, the varialbe `$bool` is initially `True` (the logical value false) but is then changed to `False`.
+In this example, the variable `$bool` is initially `True` (the logical value false) but is then changed to `False`.
 
 Attempting to change a variable to something other than the type it was given MUST set the variable to a random valid data of the original type. It is up to the developer to not mess this up, as it MUST be silent to the developer.
 
