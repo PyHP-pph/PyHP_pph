@@ -1,6 +1,6 @@
 # PyHP++#
 
-PyHP++# is both interpreted and compiled with a Compiled Interpreter-Compiler (CIC). The standard is currently under development by the the Language Deterioration Committee.
+PyHP++# is a programming language originally created by Redditor u/DarkJarris and named by u/alexbuzzbee. The community started as the subreddit r/PyHP_pph, specifications were made, and users from r/ProgrammerHumor flocked to the sub. In June 2017, the PyHP++# GitHub repository was made to allow everyone to easiy contribute. PyHP++# is both interpreted and compiled with a Compiled Interpreter-Compiler (CIC). The standard is currently under development by the the Language Deterioration Committee.
 
 This repository is currently serving as a specification document for the language. Once the standard is finished, ratified, and certified by the Committee, development will commence on creating a compiled interpreter-compiler for the language.
 
