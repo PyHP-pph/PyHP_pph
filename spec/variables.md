@@ -6,7 +6,7 @@ From PHP and C++.
 
 There SHALL be a way to declare variables using `variable_type $variable_name = new variable_type(variable_value);`. 
 
-## Example
+## Examples
 
 Here is an example of a basic variable declaration.
 
