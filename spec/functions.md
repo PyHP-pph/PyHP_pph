@@ -1,6 +1,6 @@
-# Variables
+# Functions
 
-From C# and C++.
+From all inspiration languages.
 
 ## Syntax
 
