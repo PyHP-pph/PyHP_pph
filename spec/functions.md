@@ -5,7 +5,7 @@ From C# and C++.
 ## Syntax
 
 There SHALL be a way to declare functions using `return_type function_name(arguments) { body }`. Function names MUST follow the same naming rules as variables.
- { body }
+
 ## Examples
 
 Here is an example of a basic function declaration. This function takes two (2) integers and returns their equality.
