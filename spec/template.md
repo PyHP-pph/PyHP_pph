@@ -79,7 +79,7 @@ The final output is:
 
 
 
-hello world
+world hello
 ```
 
 ### Example using subsitution and addition
